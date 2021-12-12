@@ -1,0 +1,10 @@
+[Unit]
+Description=uWSGI instance to serve granusmart
+After=network.target
+
+[Service]
+User=vincentwei1021
+Group=vincentwei1021
+ExecStart= /bin/sh -c 'cd /home/Granusmart; source /home/Granusmart/bin/activate; uwsgi --ini granusmart.ini'
+[Install]
+WantedBy=multi-user.target
