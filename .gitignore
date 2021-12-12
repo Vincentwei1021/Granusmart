@@ -1,0 +1,9 @@
+bin/
+lib/
+include/
+lib64
+share/
+granusmart.sock
+pyvenv.cfg
+pip-selfcheck.json
+models/

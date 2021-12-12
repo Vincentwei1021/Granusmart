@@ -1,0 +1,221 @@
+<!-- https://demos.creative-tim.com/now-ui-kit/docs/1.0/getting-started/introduction.html -->
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+  <meta charset="utf-8" /> 
+  <link rel="apple-touch-icon" sizes="76x76" href="/static/img/apple-icon.png" /> 
+  <link rel="icon" type="image/png" href="/static/img/favicon.png" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+  <title>Doc - CourseRec</title> 
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" /> 
+  
+  <!--     Fonts and icons     --> 
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" /> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" /> 
+  <!-- CSS Files --> 
+  <link href="/static/css/bootstrap.min.css" rel="stylesheet" /> 
+  <link href="/static/css/now-ui-kit.min.css" rel="stylesheet" /> 
+  <!-- Documentation extras --> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" /> 
+  <link rel="stylesheet" href="/static/demo/docs.min.css" /> 
+  <style>
+   .navbar-absolute-logo{
+       padding-left: 45px;
+   }
+   .navbar-absolute-logo img{
+       position: absolute;
+       left: 15px;
+       margin-top: -6px;
+   }
+   body{
+     background: white;
+   }
+</style> 
+  <!-- CSS Just for demo purpose, don't include it in your project --> 
+  <link href="/static/demo/demo.css" rel="stylesheet" /> 
+  
+ </head> 
+ <body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active"> 
+  
+  <!-- End Google Tag Manager (noscript) --> 
+  <a id="skippy" class="sr-only sr-only-focusable" href="#content"> 
+   <div class="container"> 
+    <span class="skiplink-text">Skip to main content</span> 
+   </div> </a> 
+  <header class="navbar navbar-expand navbar-dark bg-primary flex-column flex-md-row bd-navbar"> 
+   <a class="navbar-brand mr-0 mr-md-2 navbar-absolute-logo" href="landing-page.html" target="_blank"> CourseRec </a> 
+   <ul class="navbar-nav flex-row d-none d-md-flex"> 
+    <li class="nav-item"> <a class="nav-link p-2" href="#version"> 0.5.0 </a> </li> 
+    
+    <li class="nav-item"> <a class="nav-link" rel="tooltip" title="Github" data-placement="bottom" href="https://github.com/WING-NUS" target="_blank"><i class="fab fa-github"></i></a> </li> 
+    <li class="nav-item"> <a class="nav-link" rel="tooltip" title="Github" data-placement="bottom" href="https://twitter.com/wing_nus" target="_blank"><i class="fab fa-twitter"></i></a> </li> 
+   </ul> 
+   <div class="navbar-nav-scroll ml-md-auto "> 
+    <ul class="navbar-nav bd-navbar-nav flex-row"> 
+     <li class="nav-item"> <a class="nav-link active" href="https://github.com/HoldenHu/CourseRec"><i class="now-ui-icons objects_diamond"></i> Give us a star</a> </li> 
+     <li class="nav-item"> <a class="nav-link" href="./demo"><i class="now-ui-icons tech_tv"></i> Live Preview</a> </li> 
+     <li class="nav-item"> <a class="nav-link" href="./" target="_blank" rel="noopener"><i class="now-ui-icons ui-2_settings-90"></i> Report Issue</a> </li> 
+    </ul> 
+   </div> 
+   <!-- <a class="btn btn-white d-none d-lg-inline-block" href="">Download</a> --> 
+  </header> 
+  <div class="container-fluid"> 
+   <div class="row flex-xl-nowrap"> 
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar"> 
+     <nav class="collapse bd-links" id="bd-docs-nav"> 
+      <div class="bd-toc-item active"> 
+       <a class="bd-toc-link" href="#docs"> Getting started </a> 
+       <ul class="nav bd-sidenav"> 
+        <li class="active bd-sidenav-active"> <a href="docs/1.0/getting-started/introduction.html"> Introduction </a> </li> 
+        <li class=""> <a href="docs/1.0/getting-started/license.html"> License </a> </li> 
+        <li class=""> <a href="docs/1.0/getting-started/file-structure.html"> File Structure </a> </li> 
+       </ul> 
+      </div> 
+      <div class="bd-toc-item active"> 
+       <a class="bd-toc-link" href="#docs"> CRS </a> 
+       <ul class="nav bd-sidenav"> 
+        <li class=""> <a href="docs/1.0/components/tooltips.html"> Plain Models </a> </li> 
+        <li class=""> <a href="docs/1.0/components/typography.html"> Metadata Addition </a> </li> 
+       </ul> 
+      </div> 
+     </nav> 
+    </div> 
+    <div class="d-none d-xl-block col-xl-2 bd-toc"> 
+     <ul class="section-nav"> 
+      <li class="toc-entry toc-h2"><a href="#quick-start">Quick start</a></li> 
+      <li class="toc-entry toc-h2"><a href="#overview">Overview</a> 
+       <ul> 
+        <li class="toc-entry toc-h3"><a href="#base-models">Base Models</a></li> 
+        <li class="toc-entry toc-h3"><a href="#settings">Settings</a></li> 
+       </ul> </li> 
+     </ul> 
+    </div> 
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main"> 
+     
+     <h1 class="bd-title" id="content">Introduction</h1> 
+     <p class="bd-lead">Get started with CourseRec, with popular recommender models - ItemPop, ItemKNN, MF, MLP, NeuMF</p> 
+     <h2 id="quick-start">Quick start</h2> 
+     <p>Looking to quickly use the online demo built from trained models. <a href="https://github.com/HoldenHu/CourseRec/">head to the project page</a></p> 
+     <p>TODO</p>
+
+     <h2 id="overview">Overview</h2> 
+          <h3 id="base-models">Base Models</h3> 
+          <!-- Tabs with Background on Card -->
+              <div class="card">
+                <div class="card-header">
+                  <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist" data-background-color="orange">
+                    <li class="nav-item">
+                      <a class="nav-link active" data-toggle="tab" href="#itempop" role="tab">ItemPop</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#mf" role="tab">MF</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#mlp" role="tab">MLP</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#neumf" role="tab">NeuMF</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body">
+                  <!-- Tab panes -->
+                  <div class="tab-content text-center">
+                    <div class="tab-pane active" id="itempop" role="tabpanel">
+                      <p>The most basic, non-personalized recommendation method where courses are ranked by their popularity (number of interactions)</p>
+                    </div>
+                    <div class="tab-pane" id="mf" role="tabpanel">
+                      <p> The standard collaborative filtering method where the user-–item interaction matrix is factorized into two low-rank user and item factors. Predictions are calculated as the inner product of both respective user and item factors. </p>
+                    </div>
+                    <div class="tab-pane" id="mlp" role="tabpanel">
+                      <p>Another collaborative filtering method, where MLP sends the two embedded spaces of users and items into neural layers to get prediction.</p>
+                    </div>
+                    <div class="tab-pane" id="neumf" role="tabpanel">
+                      <p>
+                        NeuMF combines features by concatenating MF and MLP predictions as hidden layer.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          <!-- End Tabs on plain Card -->
+     
+     <p>The <code class="highlighter-rouge">&lt;manage.py&gt;</code> can be the access portal for the project running.</p> 
+     <figure class="highlight">
+      <pre><code class="language-html" data-lang="html">
+        <span class="nt">python</span> <span class="na">manage.py</span><span class="s">--model itempop --dataset jobrec.nocoldstart --num_neg_test 99 --top_k 10</span> </code></pre>
+     </figure> 
+
+     <h3 id="settings">Settings</h3> 
+     
+       <details> 
+        <summary class="text-primary mb-3">Basic parameter for the setting</summary> 
+        <ul> 
+         <li>use_metadata: Whether add the information of user metadata</li> 
+         <li>use_aot: Whether add the information of course area of training</li> 
+         <li>automatic_aot: Whether use the AOT in balance manner</li> 
+         <li>aot_vector: Whether use the automatic AOT vector</li> 
+         <li>aot_cluster_num: The number of clustered aot</li> 
+         <li>num_neg_train: Number of negative instances to pair with a positive instance while training</li> 
+         <li>num_neg_test: Number of negative instances to pair with a positive instance while testing</li> 
+         <li>verbose: Show performance per X iterations</li> 
+         <li>top_k: compute metrics@top_k</li> 
+        </ul> 
+       </details>
+       <details> 
+        <summary class="text-primary mb-3">Parameter for the Neural Training</summary> 
+        <ul> 
+         <li>factor_num: predictive factors numbers in the model</li> 
+         <li>epochs: Number of epochs.</li> 
+         <li>batch_size: Batch size.</li> 
+         <li>layers: Size of each layer. Note that the first layer is the concatenation of user and item embeddings. So layers[0]/2 is the embedding size.</li> 
+         <li>weight_decay: Regularization for each layer</li> 
+         <li>lr: Learning rate.</li> 
+         <li>dropout: Add dropout layer after each dense layer, with p = dropout_prob</li> 
+         <li>learner: Specify an optimizer: adagrad, adam, rmsprop, sgd</li> 
+        </ul>  
+        </details>
+    
+     
+    </main> 
+   </div> 
+  </div> 
+  <!--   Core JS Files   --> 
+  <script src="/static/js/core/jquery.min.js" type="text/javascript"></script> 
+  <script src="/static/js/core/popper.min.js" type="text/javascript"></script> 
+  <script src="/static/js/core/bootstrap.min.js" type="text/javascript"></script> 
+  <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ --> 
+  <script src="/static/js/plugins/bootstrap-switch.js"></script> 
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ --> 
+  <script src="/static/js/plugins/nouislider.min.js" type="text/javascript"></script> 
+  <!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+  <script src="/static/js/plugins/bootstrap-datepicker.js" type="text/javascript"></script> 
+  <!--  Google Maps Plugin    --> 
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2Yno10-YTnLjjn_Vtk0V8cdcY5lC4plU"></script> 
+  <!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
+  <script src="/static/js/now-ui-kit.min.js?v=1.3.0" type="text/javascript"></script> 
+  <script>
+
+</script> 
+  <noscript> 
+   <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=111649226022273&amp;ev=PageView&amp;noscript=1" /> 
+  </noscript> 
+  <script src="/static/demo/docs.min.js"></script> 
+  <script src="/static/demo/vendor/anchor.min.js"></script> 
+  <script src="/static/demo/vendor/clipboard.min.js"></script> 
+  <script src="/static/demo/vendor/holder.min.js"></script> 
+  <script src="/static/demo/src/application.js"></script> 
+  <script>
+  $(document).ready(function(){
+  });
+</script> 
+  <script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  })
+</script>   
+ </body>
+</html>
