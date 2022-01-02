@@ -2,6 +2,7 @@ import os
 import sys
 import skimage.io
 import numpy as np
+import tensorflow as tf
 from tensorflow.compat.v1 import ConfigProto
 from tensorflow.compat.v1 import InteractiveSession
 from time import time 
@@ -11,8 +12,9 @@ from mrcnn import visualize
 from mrcnn import get_size
 from mrcnn.config import Config
 import matplotlib
-import tensorflow as tf
 from tensorflow.python.keras.backend import set_session
+import scipy.io
+import scipy.ndimage
 matplotlib.use('Agg')
 
 
@@ -22,11 +24,12 @@ ROOT_DIR = os.getcwd()
 sys.path.append(ROOT_DIR)
 IMAGE_DIR = os.path.join(ROOT_DIR, "images")
 MODEL_DIR = os.path.join(ROOT_DIR, "models")
-COCO_MODEL_PATH = os.path.join(MODEL_DIR, "gsmart_zy_ver01.h5")
+
+COCO_MODEL_PATH = os.path.join(MODEL_DIR, "gsmart_zy_ver02.h5")
 IMAGE_sav_DIR = os.path.join(ROOT_DIR, "test results")
 
 # Global parameters
-dpi_to_mm = 25.4/300
+dpi_to_mm = 25.4/300*3
 # Session config
 sess = tf.Session()
 graph = tf.get_default_graph()
@@ -74,8 +77,9 @@ def create_model(weight_path=COCO_MODEL_PATH):
         # use small validation steps since the epoch is small
         VALIDATION_STEPS = 50
 
-        IMAGE_MIN_DIM = 256
-        IMAGE_MAX_DIM = 256
+
+#        IMAGE_MIN_DIM = (1800//64)*64
+#       IMAGE_MAX_DIM = (1800//64)*64
 
     # model config
     model_config = InferenceConfig()
@@ -133,6 +137,12 @@ def get_kernel_ratio(result, kernel_no, mask_chky):
     kernel_width = []       #array of kernel width                                         #6
     kernel_length_to_width = []       #array of kernel length/width                        #7
     final_mask = result['masks']
+    
+    mask_chky = scipy.ndimage.interpolation.zoom(input=mask_chky, zoom=[1/3, 1/3], order = 0)
+    final_mask = scipy.ndimage.interpolation.zoom(input=final_mask, zoom=[1/3, 1/3, 1], order = 0)
+
+    
+
     for i in range(kernel_no):
         kernel_size = get_size.get_min_max_feret_from_mask(final_mask[:, :, i])
 
@@ -144,15 +154,24 @@ def get_kernel_ratio(result, kernel_no, mask_chky):
     fig, axes = plt.subplots(1, 3, figsize=(7.5, 2.5), dpi=100, sharex=True, sharey=True)
     axes[0].hist(kernel_length, **kwargs, color='g', label='Length')
     axes[0].set_title('Kernel length distribution')
+    axes[0].set_xlabel('Length(mm)')
+    axes[0].set_ylabel('Kernel number')
 
     axes[1].hist(kernel_width, **kwargs, color='b', label='Width')
     axes[1].set_title('Kernel width distribution')
+    axes[1].set_xlabel('Width(mm)')
+    axes[1].set_ylabel('Kernel number')
 
     axes[2].hist(kernel_length_to_width, **kwargs, color='r', label='Length/Width')
     axes[2].set_title('Length/width ratio')
+    axes[2].set_xlabel('L/W ratio')
+    axes[2].set_ylabel('Kernel number')
 
     # axes.set_xlim(0, 10); ax.set_ylim(0, 1);
     plt.tight_layout()
+    plt.show()    #---show image
+    plt.savefig('static/img/output/distribution.jpg')
+
 
     kernel_chalky_ratio = np.sum(np.transpose(final_mask, (2, 0, 1)) * mask_chky, axis=(1, 2)) / np.sum(final_mask, axis=(0, 1))
 
@@ -178,3 +197,12 @@ def get_kernel_ratio(result, kernel_no, mask_chky):
 
 
 create_model()
+
+# # for model debugging -Zhiyong
+# IMAGE_file = os.path.join(ROOT_DIR, "images/300dpi_test.jpg")
+# load_image(IMAGE_file)
+# result = run_model()
+# mask_chky = get_chalky_mask(result)
+# kernel_no, kernel_husk_no, kernel_bran_no, kernel_milled_no = get_kernel_numbers(result)
+# axes, kernel_length, kernel_width, kernel_length_to_width, [final_chalky_ratio, whole_kernel_ratio, head_kernel_ratio, bb_kernel_ratio, broken_kernel_ratio] = get_kernel_ratio(result, kernel_no, mask_chky)
+

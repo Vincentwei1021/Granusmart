@@ -1,6 +1,6 @@
 import os
 from werkzeug.utils import secure_filename
-# import gsmart_model as gs
+import gsmart_model as gs
 import numpy
 
 from flask import Flask, render_template, url_for, request, jsonify, redirect, send_from_directory
@@ -78,8 +78,9 @@ def run_model():
     table_results += _table
     table_results = [num.item() for num in table_results]
 
-    output_pic_path = 'static/img/dashboard.png'
-    return jsonify(status=1, result_path=output_pic_path, table_results=table_results)
+    kernel_recognition = 'static/img/output/kernel_recognition.jpg'
+    distribution = 'static/img/output/distribution.jpg'
+    return jsonify(status=1, table_results=table_results, kernel_length=round(sum(kernel_length)/len(kernel_length),2), kernel_width=round(sum(kernel_width)/len(kernel_width),2), kernel_length_to_width=round(sum(kernel_length_to_width)/len(kernel_length_to_width),2), kernel_recognition=kernel_recognition, distribution=distribution)
 
 
 if __name__ == '__main__':
