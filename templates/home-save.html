@@ -1,0 +1,350 @@
+<!--
+
+=========================================================
+* Now UI Kit - v1.3.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/now-ui-kit
+* Copyright 2019 Creative Tim (http://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/now-ui-kit/blob/master/LICENSE.md)
+
+* Designed by www.invisionapp.com Coded by www.creative-tim.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="/static/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="/static/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Granusmart
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- CSS Files -->
+  <link href="/static/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/static/css/now-ui-kit.css?v=1.3.0" rel="stylesheet" />
+  <link href="/static/css/fileuploader.css" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="/static/demo/demo.css" rel="stylesheet" />
+</head>
+
+<body class="index-page sidebar-collapse">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent " color-on-scroll="400">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="#" rel="tooltip" title="Designed by Granusmart" data-placement="bottom" target="_blank">
+          CourseRec
+        </a>
+        
+      </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="/static/img/rice.jpg">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)" onclick="scrollToDownload()">
+              <i class="now-ui-icons arrows-1_cloud-download-93"></i>
+              <p>Download</p>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" data-toggle="dropdown">
+              <i class="now-ui-icons design_app"></i>
+              <p>Introduction</p>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink1">
+              <a class="dropdown-item" href="#">
+                <i class="now-ui-icons business_chart-pie-36"></i> Experiement
+              </a>
+              <a class="dropdown-item" target="_blank" href="introduction">
+                <i class="now-ui-icons design_bullet-list-67"></i> Documentation
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-neutral" href="/static/" target="_blank">
+              <i class="now-ui-icons media-1_button-power"></i>
+              <p>Return to Home</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/wing_nus" target="_blank">
+              <i class="fab fa-twitter"></i>
+              <p class="d-lg-none d-xl-none">Twitter</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="Like us on Github" data-placement="bottom" href="https://github.com/WING-NUS" target="_blank">
+              <i class="fab fa-github"></i>
+              <p class="d-lg-none d-xl-none">Github</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="Follow our website" data-placement="bottom" href="https://wing.comp.nus.edu.sg/an-artificial-intelligence-based-system-for-boosting-career-prospects/" target="_blank">
+              <i class="now-ui-icons business_globe"></i>
+              <p class="d-lg-none d-xl-none">WING</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+  <div class="wrapper">
+    <div class="page-header page-header-small">
+      <div class="page-header-image" data-parallax="true" style="background-image:url('/static/img/bg4.jpg');">
+      </div>
+      <div class="container">
+        <div class="content-center brand">
+          <br><br><br><br>
+          <h1 class="h1-seo">DEMO</h1>
+          <h3>A Demo for Various Recommender Model Predictions</h3>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="section section-basic" id="basic-elements">
+        <div class="container">
+          <h3 class="title">Basic Elements</h3>
+
+          <div class="card">
+                <div class="card-body">
+                  <!-- Tab panes -->
+                  <div class="tab-content text-center">
+                    <div class="tab-pane active" id="itempop" role="tabpanel">
+
+                      <!-- <div class="row">
+                        <div class="col-sm-12 col-lg-12">
+                              <form action="" enctype='multipart/form-data' method='POST'>
+                                <input type="file" name="file">
+                                <input type="submit" value="上传">
+                            </form>
+                        </div>
+                      </div> -->
+                      
+                      <div class="row">
+                        <div class="file-upload">
+                          <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
+
+                          <div class="image-upload-wrap">
+                            <input id="target_pic" class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                            <div class="drag-text">
+                              <h3>Drag and drop a file or select add Image</h3>
+                            </div>
+                          </div>
+                          <div class="file-upload-content">
+                            <img class="file-upload-image" src="#" alt="your image" />
+                            <div class="image-title-wrap">
+                              <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-6 col-lg-2" style="text-align: left;">
+                          <p><i>+ User Metadata</i></p>
+                        </div>
+                        <div class="col-sm-6 col-lg-2" style="text-align: left;">
+                          <input id="itempop_input_addum" type="checkbox" name="checkbox" class="bootstrap-switch" data-on-label="ON" data-off-label="OF" />
+                        </div>
+                      </div>
+                    </div>
+
+                    
+
+                  </div>
+                </div>
+              </div>
+
+              <button id="btn_lauch_model" class="btn btn-primary" data-toggle="modal" data-target="#launch_model"> Launch Model </button>
+
+              <h4 class="title">Result</h3>
+              <img id="model_result" class="d-block img-fluid" src="">
+ 
+        </div>
+      </div>
+    </div>
+    <!-- Sart Modal -->
+    <div class="modal fade" id="launch_model" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header justify-content-center">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+              <i class="now-ui-icons ui-1_simple-remove"></i>
+            </button>
+            <h4 class="title title-up">Confirm Input</h4>
+          </div>
+          <div class="modal-body">
+            <span><h6>Confirm again</h6></span>
+            <img id="pic_preview" class="d-block img-fluid" src="">
+          </div>
+          <div class="modal-footer">
+            <button id = "submit2run" type="button" class="btn btn-primary">Confirm & Launch</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  End Modal -->
+    <footer class="footer" data-background-color="black">
+      <div class=" container ">
+        <nav>
+          <ul>
+            <li>
+              <a href="https://www.skillsfuture.sg/">
+                SSG
+              </a>
+            </li>
+            <li>
+              <a href="https://wing.comp.nus.edu.sg/">
+                WING
+              </a>
+            </li>
+            <li>
+              <a href="https://wing.comp.nus.edu.sg/people/">
+                About Us
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="copyright" id="copyright">
+          &copy;
+          <script>
+            document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+          </script>, Designed by
+          <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>. Coded by
+          <a href="http://holdenhu.cn/" target="_blank">HoldenHu</a>.
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="/static/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="/static/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="/static/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+  <script src="/static/js/plugins/bootstrap-switch.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="/static/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+  <script src="/static/js/plugins/bootstrap-datepicker.js" type="text/javascript"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
+  <script src="/static/js/now-ui-kit.js?v=1.3.0" type="text/javascript"></script>
+  <script>
+  var current_pic_path_in_server = ""
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          $('.image-upload-wrap').hide();
+
+          $('.file-upload-image').attr('src', e.target.result);
+          $('.file-upload-content').show();
+
+          $('.image-title').html(input.files[0].name);
+        };
+
+        reader.readAsDataURL(input.files[0]);
+
+      } else {
+        removeUpload();
+      }
+    }
+
+    function removeUpload() {
+      $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+      $('.file-upload-content').hide();
+      $('.image-upload-wrap').show();
+    }
+    $('.image-upload-wrap').bind('dragover', function () {
+        $('.image-upload-wrap').addClass('image-dropping');
+      });
+      $('.image-upload-wrap').bind('dragleave', function () {
+        $('.image-upload-wrap').removeClass('image-dropping');
+    });
+
+    // test 的点击事件
+　　$("#btn_lauch_model").click(function(){
+        var fileObj = document.getElementById("target_pic").files[0]; // js 获取文件对象
+         if (typeof (fileObj) == "undefined" || fileObj.size <= 0) {
+             alert("Please choose pic first!");
+             $('#launch_model').modal('hide')
+             return;
+         }
+         var formFile = new FormData();
+         formFile.append("action", "UploadVMKImagePath");  
+         formFile.append("file", fileObj); //加入文件对象
+
+         var data = formFile;
+         $.ajax({
+             url: "/upload",
+             data: data,
+             type: "Post",
+             dataType: "json",
+             cache: false,//上传文件无需缓存
+             processData: false,//用于对data参数进行序列化处理 这里必须false
+             contentType: false, //必须
+             success: function (data) {
+              if (data.status == 1){
+                 alert("Uploaded to server!");
+                 console.log("Uploaded relative path Returned")
+                 var relative_path = data.relative_path;
+                 current_pic_path_in_server = relative_path
+                 $('#pic_preview').attr("src","../"+relative_path);
+               }
+             },
+         })
+　　});
+
+    $("#submit2run").click(function(){
+      // setTimeout(function () {
+      //   $('#launch_model').modal('hide')
+      // }, 2000);
+      $.ajax({
+                url: '/run_model',
+                data:{
+                  pic_path: current_pic_path_in_server
+                },
+                dataType: 'JSON',
+                type: 'GET',
+                success: function(data){
+                    if (data.status == 1){
+                      console.log("Prediction Data Returned")
+                      // Reaction for response
+                      var result_path = data.result_path;
+                      $('#model_result').attr("src","../"+result_path);
+                    }
+                }
+          });
+      $('#launch_model').modal('hide')
+    });
+  
+
+    $(document).ready(function() {
+      // the body of this function is in assets/js/now-ui-kit.js
+      nowuiKit.initSliders();
+    });
+
+    function scrollToDownload() {
+      if ($('.section-download').length != 0) {
+        $("html, body").animate({
+          scrollTop: $('.section-download').offset().top
+        }, 1000);
+      }
+    }
+  </script>
+</body>
+
+</html>
