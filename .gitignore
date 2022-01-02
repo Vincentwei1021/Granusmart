@@ -7,3 +7,5 @@ granusmart.sock
 pyvenv.cfg
 pip-selfcheck.json
 models/
+static/img/output/
+static/uploads/

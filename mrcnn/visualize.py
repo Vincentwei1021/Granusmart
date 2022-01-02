@@ -295,7 +295,8 @@ def abnormal_mask(fname, image, masks, ax=None, figsize=(8, 8), title="",):     
     # if not ax:
         # _, ax = plt.subplots(1, figsize=figsize)
         # auto_show = True
-    _, ax = plt.subplots(1, figsize=figsize)
+
+    figure, ax = plt.subplots(1, figsize=figsize)
     # height, width = image_org.shape[:2]
     # ax.set_ylim(height + 10, -10)
     # ax.set_xlim(-10, width + 10)
@@ -303,10 +304,11 @@ def abnormal_mask(fname, image, masks, ax=None, figsize=(8, 8), title="",):     
     # ax.set_title(title)
     # ax.imshow(mask_chky)
     # ax[0].imshow(mask_chky)
-    ax.imshow(image_dis)
+
+    #ax.imshow(image_dis)
     # plt.savefig(fname, bbox_inches='tight', dpi=300)
     # plt.ion()
-    plt.show()
+    #plt.show()
 
     # auto_show = False
     # if not ax:
@@ -320,6 +322,9 @@ def abnormal_mask(fname, image, masks, ax=None, figsize=(8, 8), title="",):     
     # ax.imshow(image_dis)
     # plt.savefig(fname, bbox_inches='tight', dpi=300)
     # plt.show()
+
+    ax.imshow(image_dis)
+    plt.savefig('static/img/output/kernel_recognition.jpg', dpi=300)
     return mask_chky
 
 
