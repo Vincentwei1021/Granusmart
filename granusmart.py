@@ -24,19 +24,19 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/product')
-def product():
-    return render_template('product.html')
+# @app.route('/product')
+# def product():
+#     return render_template('product.html')
 
 
-@app.route('/company')
-def company():
-    return render_template('company.html')
+# @app.route('/company')
+# def company():
+#     return render_template('company.html')
 
 
-@app.route('/contact')
-def contact():
-    return render_template('contact.html')
+# @app.route('/contact')
+# def contact():
+#     return render_template('contact.html')
 
 
 @app.route('/upload', methods=['POST', 'GET'])

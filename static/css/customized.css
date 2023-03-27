@@ -1,0 +1,26 @@
+.news-item {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.news-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.news-item .title {
+  margin-top: 0;
+}
+
+.news-item .date {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.news-item .description {
+  margin-bottom: 0;
+}
